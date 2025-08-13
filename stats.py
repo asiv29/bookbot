@@ -11,3 +11,11 @@ def get_char_count(text):
         else:
             char_count[char]=1
     return char_count
+
+def format_count(dict):
+    list=[]
+    for char in dict:
+        temp={"char": char, "num": dict[char]}
+        list.append(temp)
+    list.sort(key=lambda item: item['num'], reverse=True)
+    return list
